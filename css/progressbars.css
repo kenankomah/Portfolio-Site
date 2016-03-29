@@ -1,0 +1,326 @@
+.progressbar {
+    width: 50%;
+    height: 25px;
+    background-color: #eee;
+	background-color: rgba(0,0,0,0.05);
+    padding: 10px;
+    margin: .6em 0;
+    clear: both;
+	border-radius:20px;
+	border:1px solid rgba(0,0,0,0.05);
+	margin-bottom:40px;
+}
+
+.progressjs,.progresshtml,.progresscss,.progressjq,.progresssql,.progressphp,.progressaj,.progressrd,.progressjq,.progressrd,.progressphp,.progressajs{
+    height: 25px;
+    width: 0%;
+    max-width: 100%;
+    float: left;
+	border-radius:10px;  
+	background-color: #eee
+}
+
+.progressjs{
+	-webkit-animation: progressjs 2s 1 forwards;
+    -moz-animation: progressjs 2s 1 forwards;
+    -ms-animation: progressjs 2s 1 forwards;
+    animation: progressjs 2s 1 forwards;
+}
+
+.progresshtml {
+    -webkit-animation: progresshtml 2s 1 forwards;
+    -moz-animation: progresshtml 2s 1 forwards;
+    -ms-animation: progresshtml 2s 1 forwards;
+    animation: progresshtml 2s 1 forwards;
+	
+}
+
+.progresscss {
+    -webkit-animation: progresscss 2s 1 forwards;
+    -moz-animation: progresscss 2s 1 forwards;
+    -ms-animation: progresscss 2s 1 forwards;
+    animation: progresscss 2s 1 forwards;	
+}
+
+
+.progressjq {
+    -webkit-animation: progressjq 2s 1 forwards;
+    -moz-animation: progressjq 2s 1 forwards;
+    -ms-animation: progressjq 2s 1 forwards;
+    animation: progressjq 2s 1 forwards;	
+}
+
+.progressphp{
+    -webkit-animation: progressphp 2s 1 forwards;
+    -moz-animation: progressphp 2s 1 forwards;
+    -ms-animation: progressphp 2s 1 forwards;
+    animation: progressphp 2s 1 forwards;	
+}
+
+
+.progresssql{
+    -webkit-animation: progresssql 2s 1 forwards;
+    -moz-animation: progresssql 2s 1 forwards;
+    -ms-animation: progresssql 2s 1 forwards;
+    animation: progresssql 2s 1 forwards;	
+}
+
+
+.progressrd{
+    -webkit-animation: progressrd 2s 1 forwards;
+    -moz-animation: progressrd 2s 1 forwards;
+    -ms-animation: progressrd 2s 1 forwards;
+    animation: progressrd 2s 1 forwards;	
+}
+
+
+.progressphp{
+    -webkit-animation: progressphp 2s 1 forwards;
+    -moz-animation: progressphp 2s 1 forwards;
+    -ms-animation: progressphp 2s 1 forwards;
+    animation: progressphp 2s 1 forwards;	
+}
+
+
+.progressajs{
+    -webkit-animation: progressajs 2s 1 forwards;
+    -moz-animation: progressajs 2s 1 forwards;
+    -ms-animation: progressajs 2s 1 forwards;
+    animation: progressajs 2s 1 forwards;	
+}
+
+#progressjs{background-color: #8585FF;}
+#progresshtml{background-color: #87DE70;}
+#progresscss{background-color: #DEB170;}
+#progressjq{background-color: #70D5DE;}
+#progressrd{background-color: #EC7284;}
+#progressphp{background-color: #C17BEF;}
+#progresssql{background-color: #ECBA4E;}
+#progressajs{background-color: #F7DC6F;}
+
+
+
+.baranim {
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+    background: url('../assets/images/stripes.gif') repeat-x;
+    -moz-opacity: 0.25;
+    -khtml-opacity: 0.25;
+    opacity: 0.25;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    filter: alpha(opacity=25);
+	
+}
+/*=========================================================================== java script=======================================================================================*/
+@-webkit-keyframes progressjs { 
+    from { }
+
+    to { width: 50% }
+}
+
+@-moz-keyframes progressjs { 
+    from { }
+
+    to { width: 70% }
+}
+
+@-ms-keyframes progressjs { 
+    from { }
+
+    to { width: 70% }
+}
+
+@keyframes progressjs { 
+    from { }
+
+    to { width: 70% }
+}
+
+/*=========================================================================== html =======================================================================================*/
+@-webkit-keyframes progresshtml { 
+    from { }
+
+    to { width: 53% }
+}
+
+@-moz-keyframes progresshtml { 
+    from { }
+
+    to { width: 53% }
+}
+
+@-ms-keyframes progresshtml { 
+    from { }
+
+    to { width: 53% }
+}
+@keyframes progresshtml { 
+    from { }
+
+    to { width: 53% }
+}
+/*=========================================================================== css =======================================================================================*/
+
+@-webkit-keyframes progresscss{ 
+    from { }
+
+    to { width: 50% }
+}
+
+@-moz-keyframes progresscss{ 
+    from { }
+
+    to { width: 50% }
+}
+
+@-ms-keyframes progresscss{ 
+    from { }
+
+    to { width: 50% }
+}
+@keyframes progresscss{ 
+    from { }
+
+    to { width: 50% }
+}
+
+/*=========================================================================== sql =======================================================================================*/
+
+@-webkit-keyframes progresssql{ 
+    from { }
+
+    to { width: 40% }
+}
+
+@-moz-keyframes progresssql{ 
+    from { }
+
+    to { width: 40% }
+}
+
+@-ms-keyframes progresssql{ 
+    from { }
+
+    to { width: 40% }
+}
+@keyframes progresssql{ 
+    from { }
+
+    to { width: 40% }
+}
+
+
+/*=========================================================================== jquery =======================================================================================*/
+
+@-webkit-keyframes progressjq{ 
+    from { }
+
+    to { width: 65% }
+}
+
+@-moz-keyframes progressjq{ 
+    from { }
+
+    to { width: 65% }
+}
+
+@-ms-keyframes progressjq{ 
+    from { }
+
+    to { width: 65% }
+}
+@keyframes progressjq{ 
+    from { }
+
+    to { width: 65% }
+}
+
+
+
+/*=========================================================================== responsive design ==================================================================================*/
+
+@-webkit-keyframes progressrd{ 
+    from { }
+
+    to { width: 55% }
+}
+
+@-moz-keyframes progressrd{ 
+    from { }
+
+    to { width: 55% }
+}
+
+@-ms-keyframes progressrd{ 
+    from { }
+
+    to { width: 55% }
+}
+@keyframes progressrd{ 
+    from { }
+
+    to { width: 55% }
+}
+
+
+/*=========================================================================== php =======================================================================================*/
+
+@-webkit-keyframes progressphp{ 
+    from { }
+
+    to { width: 45% }
+}
+
+@-moz-keyframes progressphp{ 
+    from { }
+
+    to { width: 45% }
+}
+
+@-ms-keyframes progressphp{ 
+    from { }
+
+    to { width: 45% }
+}
+@keyframes progressphp{ 
+    from { }
+
+    to { width: 45% }
+}
+
+
+/*====================================================================== angular js =======================================================================================*/
+
+@-webkit-keyframes progressajs{ 
+    from { }
+
+    to { width: 45% }
+}
+
+@-moz-keyframes progressajs{ 
+    from { }
+
+    to { width: 45% }
+}
+
+@-ms-keyframes progressajs{ 
+    from { }
+
+    to { width: 45% }
+}
+@keyframes progressajs{ 
+    from { }
+
+    to { width: 45% }
+}
+
+
+
+@media only screen and (max-width: 600px){
+	.progressbar {
+		width: 80%;	
+		font-size:90%;
+	}
+}
