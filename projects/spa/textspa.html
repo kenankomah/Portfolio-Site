@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<p>Click on the following link to view the code on <a href="https://github.com/kenankomah/portfoliosite/tree/master/spa" target='_blank'><b>GitHub</b></a></p>
+<title> Text Analysing Single Page Application</title>
+
+</head>
+
+<body>
+<h1>Text Analyser</h1>
+<div id="border">
+   <center> <textarea id='text' onkeyup="time()" placeholder='Please type or paste text here' ></textarea> </center>
+</div>
+
+<center>
+    <div class="panel panel-default" id='list'>
+	  <div class="panel-heading">Unique words and the number of times they appear in the text</div>
+	  <div class="panel-body"><ul id="word"></ul> </div> 
+	</div>
+</center>
+
+<div id="graphDiv"></div>
+
+<h2>Further Analysis</h2>
+<center><small>Here the most relevant keywords will be selected when you press "Get Keywords", Whilst "Get Entities" will give you people, places, organisations e.t.c.</small></center>
+<center>
+	<div id='container'>
+		<button class="btn btn-primary" id='entities' onclick="entityExtraction()">Get Entities</button>
+		<button class="btn btn-primary" id='keywords' onclick="keywordExtraction()">Get Keywords</button>
+	</div>
+</center>
+
+<table id='keyw' class="table table-striped">
+    <thead>
+      <tr>
+        <th>Keywords</th>
+        <th>Relevance</th>
+      </tr>
+    </thead>
+    <tbody id='key'>
+	  
+	</tbody> 
+</table>
+
+<table id='entit' class="table table-striped">
+    <thead>
+      <tr>
+        <th>Entities</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody id='ent'>
+	  
+	</tbody> 
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src='js/keywords.js'></script>
+<script src='js/wordfrequency.js'></script>
+
+ 
+</body>
+</html>

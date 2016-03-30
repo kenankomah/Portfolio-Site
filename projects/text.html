@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Text Analyser</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/projects.css"> 	
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" type="text/css">  
+	</head>
+
+	<body>
+	<center>
+		<h1>TEXT ANALYSER</h1>
+		<h2><i>HTML & JavaScript App</i></h2>
+	</center>
+	<center>
+	    <a href="spa/textspa.html" target='_blank'>  <img class="image" src="../assets/images/projects/text.png"></a>
+		
+		<div class="description">
+		<p> <b>Background</b><br><br>This is a simple app which creates a breakdown of words typed or pasted into the text box along with the frequency of each word.<br><br>
+		</p>
+			<b>Technical info</b> 
+			<ul class="fa-ul"> 
+				<li><i class="fa-li fa fa-chevron-circle-right"></i> I used JavaScript to create the word breakdown and frequency count.</li>
+                <li><i class="fa-li fa fa-chevron-circle-right"></i> The two keyword analysis are done using an API.</li>				
+				<li><i class="fa-li fa fa-chevron-circle-right"></i> To get the keyword analysis the text is URI encoded so it can be analysed using the API. </li> 
+				<li><i class="fa-li fa fa-github"></i> Follow this link to view the code on <a href="https://github.com/kenankomah/portfoliosite/tree/master/spa" target='_blank'> <b>GitHub</b> </a> </li> 
+			</ul>
+		<p>You can have a go on the app by clicking this button &nbsp  <a href="spa/textspa.html" target='_blank'>  <button class="button button2">Try it out</button> </a> </p>  	
+		<button onclick="goBack()" type="button" class="button button1"> Back to homepage</button>
+		</div>
+	</center>
+	<script>
+		function goBack(){
+			window.history.back();
+		}
+	</script>
+	</body>
+</html>
