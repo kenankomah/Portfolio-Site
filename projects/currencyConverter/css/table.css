@@ -1,0 +1,185 @@
+	#last:hover { 
+        background-color: #C1CBFF;
+    }
+  
+    .select:hover { 
+        background-color: #BDBDBD;
+    }
+  
+    .select{
+		cursor:pointer;
+	}
+	
+		
+	#repeat tr:nth-child(odd){
+	/*	background-color: #C6CDFF;*/
+		background-color: #EEF0FD;
+	}
+	
+	
+	#repeat tr:nth-child(even){
+		background-color: #E3E7FA;
+	}
+	
+    .fontsize{
+	  	font-size:16px;
+		text-align:right;
+		padding-top:5px;
+		padding-right:20px;		
+	}
+	
+	#currTable tbody{
+		border:1px #E6E6E6 solid;
+	}
+
+	tr {
+		width: 100%;
+		display: inline-table;
+	}
+	
+   	
+	#last{
+	    width:1%;
+	}
+		
+	#size{
+		width: 30%; 
+		text-align:left;
+	}
+	
+    #size1{
+		width: 10%; 
+		padding-right:0px;
+	}
+	
+	#size2{
+		width: 20%; 
+	    padding-left:4px;
+	} 
+/*****************************************************************************/	
+	#head{
+		width: 22%; 
+		text-align:left;
+	}
+	
+	#head1{
+		width: 5%; 
+	}
+	
+	#head2{
+		width: 20%; 
+		left:-150px;
+	}
+	
+	th, td{
+		width: 33%;
+	}
+	
+
+	
+	.symbol{
+		text-align:right;
+		/*left:1px;
+		padding-right:0px;*/
+	}
+
+	table{
+		position:relative;
+		top:10px;
+	/*	height:300px; */
+		font-family:arial;
+		font-size:15px;
+	/*	border:1px solid black;*/
+	}
+	
+	tbody{
+		height: 350px;
+		position: absolute;	  
+	}
+	
+	.overflow{
+		overflow-y: scroll;
+	}
+	
+	#overflow{
+		overflow-y: scroll;
+	}
+	
+	.shade, .overflow{
+		text-align:center;
+	}
+	
+		
+	.overflow tr:nth-child(even){
+		background-color: #D8D8D8;
+	}
+	
+	.overflow tr:nth-child(odd){
+		background-color: #F2F2F2;
+	}
+	
+	.shade{
+		background-color: grey;
+		color: white;
+	}	
+	
+	
+	button{
+		position:relative;
+		top:100px;
+	}
+	
+	#limit1{
+		position:absolute;
+		top:480px;
+		left:530px;
+		color:blue;
+	}
+	
+	#add{
+	   position:relative;
+	   top:350px;
+	}
+		
+@media only screen and (min-width: 500px){
+	.left{
+	   position:relative;
+	   text-align:left;
+	   left:80px;
+    }
+}	
+
+
+@media only screen and (max-width: 360px){
+	h1{
+		position:relative; 
+		font-size:16px;
+		top:-30px;
+	}
+			
+	#limit1{
+     	top:430px;
+		left:10px;
+		font-size:11px;
+		text-align:center;
+	}
+	
+	.left{
+	   position:relative;
+	   text-align:left;
+	   left:10px;
+    }
+	
+	#currTable{
+		position:relative;
+		top:-20px;
+	}
+	
+	#add{
+		top:315px;
+	}
+	
+	tbody{
+		height: 330px;
+	}	
+}	

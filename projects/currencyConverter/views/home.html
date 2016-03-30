@@ -1,0 +1,41 @@
+
+<center> 
+<p id="base">Select the base currency</p>
+
+<button ng-click="baseSwitch('usd')" type="button" class="btn btn-info btn-xs">USD</button>
+<button ng-click="baseSwitch('gbp')" type="button" class="btn btn-info btn-xs">GBP</button>
+<button ng-click="baseSwitch('eur')" type="button" class="btn btn-info btn-xs">EUR</button>
+<button ng-click="baseSwitch('cad')" type="button" class="btn btn-info btn-xs">CAD</button>
+
+</center>
+
+<div id="container" class="col-md-6 col-md-offset-3">
+<p id='time'><b>Data last updated at:</b> <i>{{convertToDate(date)| date:'medium'}}</i> </p>
+<p ng-hide="validity" id="valCheck">Please enter a valid number</p>
+<p class="txt">Base currency is: <b>{{source}}</b> </p> 
+
+<input id="baseNumber" ng-model="baseAmount" type="text" ng-init="baseAmount='1'" value="1" placeholder="Enter a number"/> 
+
+  <table class="table table-striped">
+  <thead class="thead-default">
+    <tr>
+      <th id='head'>Currency</th>
+	  <th id='head1'></th>
+      <th id='head2'>Conversion</th>
+	</tr>
+  </thead>
+  <tbody id='repeat'> <!-- ng-repeat will loop through the javascript object to display the currency data  -->
+  	<tr ng-repeat="(key, value) in currencies" ng-if="$index > 0"> <!-- ignores the first item in the object -->
+		<td id="size"><img ng-src={{value.flag}} width="20"/>&nbsp <span id='currency'>{{value.currency}}</span></td>
+	    <td id="size1" class='symbol'> <img ng-src={{value.sym}} height="15" />{{value.symbol}}  </td>  <td id="size2">{{value.amount*baseAmount/baseCurrency|number:4}}</td> 
+	    <td style="cursor:pointer" ng-click="remove($index)" id='last'> <span class="glyphicon glyphicon-remove-circle"></span></td>
+	</tr> <!-- $index is used to determin which currency has been clicked on  -->
+  </tbody>
+</table>
+<p ng-show="listNumCheck" id="limit"> 10 currency max selected</p>
+
+<div id="container1" class="col-md-6 col-md-offset-3">
+<center><a href="#/currencies-table"><button ng-click="checkList()" id="more" type="button" class="btn btn-primary">Add more currencies</button></a></center>
+</div>
+
+</div> 

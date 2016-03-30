@@ -1,0 +1,142 @@
+ #container{
+	border:1px #BDBDBD solid;
+	height: 440px;
+	background-color:#F8F8FC;
+ }
+ 
+ 
+ #time{
+	position:absolute;
+	font-size:13px;
+	left:5px;
+	top:5px;
+ }
+ 
+ #currency{
+    font-size:13px; 
+ }
+ 
+
+ p{
+   	text-align:center;
+ }
+ 
+ #base{
+    position:relative;
+	text-align:center;
+	top: -10px;
+ }
+ 
+ 
+ input{
+	position:relative;
+	left:51%;
+	width:130px;
+	padding-left:5px;
+ }
+
+ #more{
+	position:relative;
+	top:74px;
+	top:340px;
+ }
+ 
+ #convert{
+	position:relative;
+	top:40px;
+	float:right;
+	left:60px;
+ }
+ 
+ .txt{
+	position:relative;
+	left:-28%;
+	top:35px;
+ }  
+ 
+ .pad{
+	 padding-left:10px;
+ }
+ 
+ select{
+	position:relative;
+	left:150px;
+	top:-30px;
+ }
+ 
+ .btn-info{
+	position:relative;
+	top:-10px;
+ }
+ 
+
+
+#limit{
+    position:absolute;
+	top:412px;
+	left:17px;
+	/*left:200px;*/
+	color:blue;
+}
+
+#valCheck{
+	position:absolute;
+	top:5px;
+	left:300px;
+	color:red;
+	z-index:5;
+	font-size:15px;
+	font-size:11px;
+	font-weight: bold;
+}
+
+	#repeat{
+		overflow-y: scroll;
+		height: 330px;
+		height: 305px;
+	}
+
+@media only screen and (max-width: 360px){
+	#valCheck{
+		top:60px;
+		left:80px;
+	}	
+	
+	#limit{
+		position:absolute;
+		top:350px;
+		left:130px;
+		color:blue;
+	}
+	
+		
+	.navbar{
+		height:30px;
+	}
+	
+	 #container{
+		height: 380px;
+     }
+	 
+	 #more{
+	    top:275px;
+	 }
+	 
+	#repeat{
+		overflow-y: scroll;
+		height: 270px;
+	}
+	
+	#home{
+		top:-50px;
+		left:270px;
+	}
+	
+	
+	 body{
+		overflow: hidden;
+	 }
+	
+}
+
+

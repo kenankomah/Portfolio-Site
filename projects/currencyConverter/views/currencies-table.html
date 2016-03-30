@@ -1,0 +1,873 @@
+<div class="col-md-8 col-md-offset-2">
+
+<h1 style="text-align:center;">Select additional currencies</h1>
+
+<table id='currTable'  class="table table-striped">
+<thead>
+	<tr>
+		<th class="shade">Code</th>
+		<th class="shade">Name</th>
+		<th class="shade">Select</th>
+		<th class="shade"></th>
+	</tr>
+</thead>
+
+<tbody class="overflow">
+      <tr>
+		 <td class='left'><img ng-src="../currencyConverter/images/flags/usd.png" width="20">&nbsp USD</td>
+		 <td class='select' ng-click="addCurrencies('usd')">United States Dollar</td>
+		 <td><span ng-show='checkUSD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+		<td class='left'><img ng-src="../currencyConverter/images/flags/eur.png" width="20">&nbsp EUR</td>
+        <td class='select' ng-click="addCurrencies('eur')">Euro</td>
+	    <td><span ng-show='checkEUR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gbp.png" width="20">&nbsp GBP</td>
+         <td class='select' ng-click="addCurrencies('gbp')">British Pound Sterling</td>
+		 <td><span ng-show='checkGBP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'> <img ng-src="../currencyConverter/images/flags/cad.png" width="20">&nbsp CAD</td>
+         <td class='select' ng-click="addCurrencies('cad')">Canadian Dollar</td>
+		 <td><span ng-show='checkCAD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	   <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/aud.png" width="20">&nbsp AUD</td>
+         <td class='select' ng-click="addCurrencies('aud')">Australian Dollar</td>
+		 <td><span ng-show='checkAUD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/rub.png" width="20">&nbsp RUB</td>
+         <td class='select' ng-click="addCurrencies('rub')"> Russian Ruble </td>
+		 <td><span ng-show='checkRUB' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/jpy.png" width="20">&nbsp JPY</td>
+         <td class='select' ng-click="addCurrencies('jpy')"> Japanese Yen</td>
+		 <td><span ng-show='checkJPY' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/inr.png" width="20">&nbsp INR</td>
+         <td class='select' ng-click="addCurrencies('inr')">Indian Rupee</td>
+		 <td><span ng-show='checkINR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	   <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bgn.png" width="20">&nbsp BGN</td>
+         <td class='select' ng-click="addCurrencies('bgn')">Bulgarian Lev</td>
+		 <td><span ng-show='checkBGN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/nzd.png" width="20">&nbsp NZD</td>
+         <td class='select' ng-click="addCurrencies('nzd')">New Zealand Dollar</td>
+		 <td><span ng-show='checkNZD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/chf.png" width="20">&nbsp CHF</td>
+         <td class='select' ng-click="addCurrencies('chf')">Swiss Franc</td>
+		 <td><span ng-show='checkCHF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/zar.png" width="20">&nbsp ZAR</td>
+         <td class='select' ng-click="addCurrencies('zar')">South African Rand</td>
+		 <td><span ng-show='checkZAR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sgd.png" width="20">&nbsp SGD</td>
+         <td class='select' ng-click="addCurrencies('sgd')">Singapore Dollar</td>
+		 <td><span ng-show='checkSGD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/hkd.png" width="20">&nbsp HKD</td>
+         <td class='select' ng-click="addCurrencies('hkd')">Hong Kong Dollar</td>
+		 <td><span ng-show='checkHKD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sek.png" width="20">&nbsp SEK</td>
+         <td class='select' ng-click="addCurrencies('sek')">Swedish Krona</td>
+		 <td><span ng-show='checkSEK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/thb.png" width="20">&nbsp THB</td>
+         <td class='select' ng-click="addCurrencies('thb')">Thai Baht</td>
+		 <td><span ng-show='checkTHB' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/huf.png" width="20">&nbsp HUF</td>
+         <td class='select' ng-click="addCurrencies('huf')">Hungarian Forint</td>
+		 <td><span ng-show='checkHUF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/cny.png" width="20">&nbsp CNY</td>
+         <td class='select' ng-click="addCurrencies('cny')">Chinese Yuan</td>
+		 <td><span ng-show='checkCNY' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	   <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/nok.png" width="20">&nbsp NOK</td>
+         <td class='select' ng-click="addCurrencies('nok')">Norwegian Krone</td>
+		 <td><span ng-show='checkNOK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mxn.png" width="20">&nbsp MXN</td>
+         <td class='select' ng-click="addCurrencies('mxn')">Mexican Peso</td>
+		 <td><span ng-show='checkMXN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/dkk.png" width="20">&nbsp DKK</td>
+         <td class='select' ng-click="addCurrencies('dkk')">Danish Krone</td>
+		 <td><span ng-show='checkDKK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/myr.png" width="20">&nbsp MYR</td>
+         <td class='select' ng-click="addCurrencies('myr')">Malaysian Ringgit</td>
+		 <td><span ng-show='checkMYR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/pln.png" width="20">&nbsp PLN</td>
+         <td class='select' ng-click="addCurrencies('pln')">Polish Zloty</td>
+		 <td><span ng-show='checkPLN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/brl.png" width="20">&nbsp BRL</td>
+         <td class='select' ng-click="addCurrencies('brl')">Brazilian Real</td>
+		 <td><span ng-show='checkBRL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/php.png" width="20">&nbsp PHP</td>
+         <td class='select' ng-click="addCurrencies('php')">Philippine Peso</td>
+		 <td><span ng-show='checkPHP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/idr.png" width="20">&nbsp IDR</td>
+         <td class='select' ng-click="addCurrencies('idr')">Indonesian Rupiah</td>
+		 <td><span ng-show='checkIDR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/czk.png" width="20">&nbsp CZK</td>
+         <td class='select' ng-click="addCurrencies('czk')">Czech Republic Koruna</td>
+		 <td><span ng-show='checkCZK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/aed.png" width="20">&nbsp AED</td>
+         <td class='select' ng-click="addCurrencies('aed')">United Arab Emirates Dirham</td>
+		 <td><span ng-show='checkAED' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/twd.png" width="20">&nbsp TWD</td>
+         <td class='select' ng-click="addCurrencies('twd')">New Taiwan Dollar</td>
+		 <td><span ng-show='checkTWD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/krw.png" width="20">&nbsp KRW</td>
+         <td class='select' ng-click="addCurrencies('krw')">South Korean Won</td>
+		 <td><span ng-show='checkKRW' class="glyphicon glyphicon-ok"></span></td>
+      </tr>    
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/afn.png" width="20">&nbsp AFN</td>
+         <td class='select' ng-click="addCurrencies('afn')">Afghan Afghani</td>
+		 <td><span ng-show='checkAFN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/all.png" width="20">&nbsp ALL</td>
+         <td class='select' ng-click="addCurrencies('all')">Albanian Lek</td>
+		  <td><span ng-show='checkALL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/amd.png" width="20">&nbsp AMD</td>
+         <td class='select' ng-click="addCurrencies('amd')">Armenian Dram</td>
+		 <td><span ng-show='checkAMD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ang.png" width="20">&nbsp ANG</td>
+         <td class='select' ng-click="addCurrencies('ang')">Netherlands Antillean Guilder</td>
+		 <td><span ng-show='checkANG' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/aoa.png" width="20">&nbsp AOA</td>
+         <td class='select' ng-click="addCurrencies('aoa')">Angolan Kwanza</td>
+		 <td><span ng-show='checkAOA' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ars.png" width="20">&nbsp ARS</td>
+         <td class='select' ng-click="addCurrencies('ars')">Argentine Peso</td>
+		 <td><span ng-show='checkARS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/awg.png" width="20">&nbsp AWG</td>
+         <td class='select' ng-click="addCurrencies('awg')">Aruban Florin</td>
+		 <td><span ng-show='checkAWG' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/azn.png" width="20">&nbsp AZN</td>
+         <td class='select' ng-click="addCurrencies('azn')">Azerbaijani Manat</td>
+		 <td><span ng-show='checkAZN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bam.png" width="20">&nbsp BAM</td>
+         <td class='select' ng-click="addCurrencies('bam')">Bosnia-Herzegovina Convertible Mark</td>
+		 <td><span ng-show='checkBAM' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bbd.png" width="20">&nbsp BBD</td>
+         <td class='select' ng-click="addCurrencies('bbd')">Barbadian Dollar</td>
+		 <td><span ng-show='checkBBD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bdt.png" width="20">&nbsp BDT</td>
+         <td class='select' ng-click="addCurrencies('bdt')">Bangladeshi Taka</td>
+		 <td><span ng-show='checkBDT' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bhd.png" width="20">&nbsp BHD</td>
+         <td class='select' ng-click="addCurrencies('bhd')">Bahraini Dinar</td>
+		 <td><span ng-show='checkBHD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bif.png" width="20">&nbsp BIF</td>
+         <td class='select' ng-click="addCurrencies('bif')">Burundian Franc</td>
+		 <td><span ng-show='checkBIF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bmd.png" width="20">&nbsp BMD</td>
+         <td class='select' ng-click="addCurrencies('bmd')">Bermudan Dollar</td>
+		 <td><span ng-show='checkBMD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bnd.png" width="20">&nbsp BND</td>
+         <td class='select' ng-click="addCurrencies('bnd')">Brunei Dollar</td>
+		 <td><span ng-show='checkBND' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bob.png" width="20">&nbsp BOB</td>
+         <td class='select' ng-click="addCurrencies('bob')">Bolivian Boliviano</td>
+		 <td><span ng-show='checkBOB' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bsd.png" width="20">&nbsp BSD</td>
+         <td class='select' ng-click="addCurrencies('bsd')">Bahamian Dollar</td>
+		 <td><span ng-show='checkBSD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/btc.png" width="20">&nbsp BTC</td>
+         <td class='select' ng-click="addCurrencies('btc')">Bitcoin</td>
+		 <td><span ng-show='checkBTC' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/btn.png" width="20">&nbsp BTN</td>
+         <td class='select' ng-click="addCurrencies('btn')">Bhutanese Ngultrum</td>
+		 <td><span ng-show='checkBTN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bwp.png" width="20">&nbsp BWP</td>
+         <td class='select' ng-click="addCurrencies('bwp')">Botswanan Pula</td>
+		 <td><span ng-show='checkBWP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/byr.png" width="20">&nbsp BYR</td>
+         <td class='select' ng-click="addCurrencies('byr')">Belarusian Ruble</td>
+		 <td><span ng-show='checkBYR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/bzd.png" width="20">&nbsp BZD</td>
+         <td class='select' ng-click="addCurrencies('bzd')">Belize Dollar</td>
+		 <td><span ng-show='checkBZD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/cdf.png" width="20">&nbsp CDF</td>
+         <td class='select' ng-click="addCurrencies('cdf')">Congolese Franc</td>
+		 <td><span ng-show='checkCDF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/clp.png" width="20">&nbsp CLF</td>
+         <td class='select' ng-click="addCurrencies('clf')">Chilean Unit of Account (UF)</td>
+		 <td><span ng-show='checkCLF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/clp.png" width="20">&nbsp CLP</td>
+         <td class='select' ng-click="addCurrencies('clp')">Chilean Peso</td>
+		 <td><span ng-show='checkCLP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/cop.png" width="20">&nbsp COP</td>
+         <td class='select' ng-click="addCurrencies('cop')">Colombian Peso</td>
+		 <td><span ng-show='checkCOP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/crc.png" width="20">&nbsp CRC</td>
+         <td class='select' ng-click="addCurrencies('crc')">Costa Rican Colón</td>
+		 <td><span ng-show='checkCRC' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+	  <tr>
+		  <td class='left'><img ng-src="../currencyConverter/images/flags/cuc.png" width="20">&nbsp CUC</td>
+		  <td class='select' ng-click="addCurrencies('cuc')">Cuban Convertible Peso</td>
+		  <td><span ng-show='checkCUC' class="glyphicon glyphicon-ok"></span></td>
+	  </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/cuc.png" width="20">&nbsp CUP</td>
+         <td class='select' ng-click="addCurrencies('cup')">Cuban Peso</td>
+		 <td><span ng-show='checkCUP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/cve.png" width="20">&nbsp CVE</td>
+         <td class='select' ng-click="addCurrencies('cve')">Cape Verdean Escudo</td>
+		 <td><span ng-show='checkCVE' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/djf.png" width="20">&nbsp DJF</td>
+         <td class='select' ng-click="addCurrencies('djf')">Djiboutian Franc</td>
+		 <td><span ng-show='checkDJF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/dop.png" width="20">&nbsp DOP</td>
+         <td class='select' ng-click="addCurrencies('dop')">Dominican Peso</td>
+		 <td><span ng-show='checkDOP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/dzd.png" width="20">&nbsp DZD</td>
+         <td class='select' ng-click="addCurrencies('dzd')">Algerian Dinar</td>
+		 <td><span ng-show='checkDZD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/eek.png" width="20">&nbsp EEK</td>
+         <td class='select' ng-click="addCurrencies('eek')">Estonian Kroon</td>
+		 <td><span ng-show='checkEEK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/egp.png" width="20">&nbsp EGP</td>
+         <td class='select' ng-click="addCurrencies('egp')">Egyptian Pound</td>
+		 <td><span ng-show='checkEGP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ern.png" width="20">&nbsp ERN</td>
+         <td class='select' ng-click="addCurrencies('ern')">Eritrean Nakfa</td>
+		 <td><span ng-show='checkERN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/etb.png" width="20">&nbsp ETB</td>
+         <td class='select' ng-click="addCurrencies('etb')">Ethiopian Birr</td>
+		 <td><span ng-show='checkETB' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/fjd.png" width="20">&nbsp FJD</td>
+         <td class='select' ng-click="addCurrencies('fjd')">Fijian Dollar</td>
+		 <td><span ng-show='checkFJD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/fkp.png" width="20">&nbsp FKP</td>
+         <td class='select' ng-click="addCurrencies('fkp')">Falkland Islands Pound</td>
+		 <td><span ng-show='checkFKP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+     
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gel.png" width="20">&nbsp GEL</td>
+         <td class='select' ng-click="addCurrencies('gel')">Georgian Lari</td>
+		 <td><span ng-show='checkGEL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ggp.png" width="20">&nbsp GGP</td>
+         <td class='select' ng-click="addCurrencies('ggp')">Guernsey Pound</td>
+		 <td><span ng-show='checkGGP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ghs.png" width="20">&nbsp GHS</td>
+         <td class='select' ng-click="addCurrencies('ghs')">Ghanaian Cedi</td>
+		 <td><span ng-show='checkGHS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gip.png" width="20">&nbsp GIP</td>
+         <td class='select' ng-click="addCurrencies('gip')">Gibraltar Pound</td>
+		 <td><span ng-show='checkGIP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gmd.png" width="20">&nbsp GMD</td>
+         <td class='select' ng-click="addCurrencies('gmd')">Gambian Dalasi</td>
+		 <td><span ng-show='checkGMD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gnf.png" width="20">&nbsp GNF</td>
+         <td class='select' ng-click="addCurrencies('gnf')">Guinean Franc</td>
+		 <td><span ng-show='checkGNF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gtq.png" width="20">&nbsp GTQ</td>
+         <td class='select' ng-click="addCurrencies('gtq')">Guatemalan Quetzal</td>
+		 <td><span ng-show='checkGTQ' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/gyd.png" width="20">&nbsp GYD</td>
+         <td class='select' ng-click="addCurrencies('gyd')">Guyanaese Dollar</td>
+		 <td><span ng-show='checkGYD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/hnl.png" width="20">&nbsp HNL</td>
+         <td class='select' ng-click="addCurrencies('hnl')">Honduran Lempira</td>
+		 <td><span ng-show='checkHNL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/hrk.png" width="20">&nbsp HRK</td>
+         <td class='select' ng-click="addCurrencies('hrk')">Croatian Kuna</td>
+		 <td><span ng-show='checkHRK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/htg.png" width="20">&nbsp HTG</td>
+         <td class='select' ng-click="addCurrencies('htg')">Haitian Gourde</td>
+		 <td><span ng-show='checkHTG' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ils.png" width="20">&nbsp ILS</td>
+         <td class='select' ng-click="addCurrencies('ils')">Israeli New Sheqel</td>
+		 <td><span ng-show='checkILS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/imp.png" width="20">&nbsp IMP</td>
+         <td class='select' ng-click="addCurrencies('imp')">Manx pound</td>
+		 <td><span ng-show='checkIMP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/iqd.png" width="20">&nbsp IQD</td>
+         <td class='select' ng-click="addCurrencies('iqd')">Iraqi Dinar</td>
+		 <td><span ng-show='checkIQD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/irr.png" width="20">&nbsp IRR</td>
+         <td class='select' ng-click="addCurrencies('irr')">Iranian Rial</td>
+		 <td><span ng-show='checkIRR' class="glyphicon glyphicon-ok"></span></td>		 
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/isk.png" width="20">&nbsp ISK</td>
+         <td class='select' ng-click="addCurrencies('isk')">Icelandic Króna</td>
+		 <td><span ng-show='checkISK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/jep.png" width="20">&nbsp JEP</td>
+         <td class='select' ng-click="addCurrencies('jep')">Jersey Pound</td>
+		 <td><span ng-show='checkJEP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/jmd.png" width="20">&nbsp JMD</td>
+         <td class='select' ng-click="addCurrencies('jmd')">Jamaican Dollar</td>
+		 <td><span ng-show='checkJMD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/jod.png" width="20">&nbsp JOD</td>
+         <td class='select' ng-click="addCurrencies('jod')">Jordanian Dinar</td>
+		 <td><span ng-show='checkJOD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kes.png" width="20">&nbsp KES</td>
+         <td class='select' ng-click="addCurrencies('kes')">Kenyan Shilling</td>
+		 <td><span ng-show='checkKES' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kgs.png" width="20">&nbsp KGS</td>
+         <td class='select' ng-click="addCurrencies('kgs')">Kyrgystani Som</td>
+		 <td><span ng-show='checkKGS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/khr.png" width="20">&nbsp KHR</td>
+         <td class='select' ng-click="addCurrencies('khr')">Cambodian Riel</td>
+		 <td><span ng-show='checkKHR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kmf.png" width="20">&nbsp KMF</td>
+         <td class='select' ng-click="addCurrencies('kmf')">Comorian Franc</td>
+		 <td><span ng-show='checkKMF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kpw.png" width="20">&nbsp KPW</td>
+         <td class='select' ng-click="addCurrencies('kpw')">North Korean Won</td>
+		 <td><span ng-show='checkKPW' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kwd.png" width="20">&nbsp KWD</td>
+         <td class='select' ng-click="addCurrencies('kwd')">Kuwaiti Dinar</td>
+		 <td><span ng-show='checkKWD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kyd.png" width="20">&nbsp KYD</td>
+         <td class='select' ng-click="addCurrencies('kyd')">Cayman Islands Dollar</td>
+		 <td><span ng-show='checkKYD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/kzt.png" width="20">&nbsp KZT</td>
+         <td class='select' ng-click="addCurrencies('kzt')">Kazakhstani Tenge</td>
+		 <td><span ng-show='checkKZT' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lak.png" width="20">&nbsp LAK</td>
+         <td class='select' ng-click="addCurrencies('lak')">Laotian Kip</td>
+		 <td><span ng-show='checkLAK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lbp.png" width="20">&nbsp LBP</td>
+         <td class='select' ng-click="addCurrencies('lbp')">Lebanese Pound</td>
+		 <td><span ng-show='checkLBP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lkr.png" width="20">&nbsp LKR</td>
+         <td class='select' ng-click="addCurrencies('lkr')">Sri Lankan Rupee</td>
+		 <td><span ng-show='checkLKR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lrd.png" width="20">&nbsp LRD</td>
+         <td class='select' ng-click="addCurrencies('lrd')">Liberian Dollar</td>
+		 <td><span ng-show='checkLRD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lsl.png" width="20">&nbsp LSL</td>
+         <td class='select' ng-click="addCurrencies('lsl')">Lesotho Loti</td>
+		 <td><span ng-show='checkLSL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ltl.png" width="20">&nbsp LTL</td>
+         <td class='select' ng-click="addCurrencies('ltl')">Lithuanian Litas</td>
+		 <td><span ng-show='checkLTL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lvl.png" width="20">&nbsp LVL</td>
+         <td class='select' ng-click="addCurrencies('lvl')">Latvian Lats</td>
+		 <td><span ng-show='checkLVL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/lyd.png" width="20">&nbsp LYD</td>
+         <td class='select' ng-click="addCurrencies('lyd')">Libyan Dinar</td>
+		 <td><span ng-show='checkLYD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mad.png" width="20">&nbsp MAD</td>
+         <td class='select' ng-click="addCurrencies('mad')">Moroccan Dirham</td>
+		 <td><span ng-show='checkMAD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mdl.png" width="20">&nbsp MDL</td>
+         <td class='select' ng-click="addCurrencies('mdl')">Moldovan Leu</td>
+		 <td><span ng-show='checkMDL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mga.png" width="20">&nbsp MGA</td>
+         <td class='select' ng-click="addCurrencies('mga')">Malagasy Ariary</td>
+		 <td><span ng-show='checkMGA' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mkd.png" width="20">&nbsp MKD</td>
+         <td class='select' ng-click="addCurrencies('mkd')">Macedonian Denar</td>
+		 <td><span ng-show='checkMKD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mmk.png" width="20">&nbsp MMK</td>
+         <td class='select' ng-click="addCurrencies('mmk')">Myanma Kyat</td>
+		 <td><span ng-show='checkMMK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mnt.png" width="20">&nbsp MNT</td>
+         <td class='select' ng-click="addCurrencies('mnt')">Mongolian Tugrik</td>
+		 <td><span ng-show='checkMNT' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mop.png" width="20">&nbsp MOP</td>
+         <td class='select' ng-click="addCurrencies('mop')">Macanese Pataca</td>
+		 <td><span ng-show='checkMOP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mro.png" width="20">&nbsp MRO</td>
+         <td class='select' ng-click="addCurrencies('mro')">Mauritanian Ouguiya</td>
+		 <td><span ng-show='checkMRO' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mur.png" width="20">&nbsp MUR</td>
+         <td class='select' ng-click="addCurrencies('mur')">Mauritian Rupee</td>
+		 <td><span ng-show='checkMUR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mvr.png" width="20">&nbsp MVR</td>
+         <td class='select' ng-click="addCurrencies('mvr')">Maldivian Rufiyaa</td>
+		 <td><span ng-show='checkMVR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mwk.png" width="20">&nbsp MWK</td>
+         <td class='select' ng-click="addCurrencies('mwk')">Malawian Kwacha</td>
+		 <td><span ng-show='checkMWK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>      
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/mzn.png" width="20">&nbsp MZN</td>
+         <td class='select' ng-click="addCurrencies('mzn')">Mozambican Metical</td>
+		 <td><span ng-show='checkMZN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/nad.png" width="20">&nbsp NAD</td>
+         <td class='select' ng-click="addCurrencies('nad')">Namibian Dollar</td>
+		 <td><span ng-show='checkNAD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ngn.png" width="20">&nbsp NGN</td>
+         <td class='select' ng-click="addCurrencies('ngn')">Nigerian Naira</td>
+		 <td><span ng-show='checkNGN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/nio.png" width="20">&nbsp NIO</td>
+         <td class='select' ng-click="addCurrencies('nio')">Nicaraguan Córdoba</td>
+		 <td><span ng-show='checkNIO' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/npr.png" width="20">&nbsp NPR</td>
+         <td class='select' ng-click="addCurrencies('npr')">Nepalese Rupee</td>
+		 <td><span ng-show='checkNPR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/omr.png" width="20">&nbsp OMR</td>
+         <td class='select' ng-click="addCurrencies('omr')">Omani Rial</td>
+		 <td><span ng-show='checkOMR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/pab.png" width="20">&nbsp PAB</td>
+         <td class='select' ng-click="addCurrencies('pab')">Panamanian Balboa</td>
+		 <td><span ng-show='checkPAB' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/pen.png" width="20">&nbsp PEN</td>
+         <td class='select' ng-click="addCurrencies('pen')">Peruvian Nuevo Sol</td>
+		 <td><span ng-show='checkPEN' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/pgk.png" width="20">&nbsp PGK</td>
+         <td class='select' ng-click="addCurrencies('pgk')">Papua New Guinean Kina</td>
+		 <td><span ng-show='checkPGK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/pkr.png" width="20">&nbsp PKR</td>
+         <td class='select' ng-click="addCurrencies('pkr')">Pakistani Rupee</td>
+		 <td><span ng-show='checkPKR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/pyg.png" width="20">&nbsp PYG</td>
+         <td class='select' ng-click="addCurrencies('pyg')">Paraguayan Guarani</td>
+		 <td><span ng-show='checkPYG' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/qar.png" width="20">&nbsp QAR</td>
+         <td class='select' ng-click="addCurrencies('qar')">Qatari Rial</td>
+		 <td><span ng-show='checkQAR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ron.png" width="20">&nbsp RON</td>
+         <td class='select' ng-click="addCurrencies('ron')">Romanian Leu</td>
+		 <td><span ng-show='checkRON' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/rsd.png" width="20">&nbsp RSD</td>
+         <td class='select' ng-click="addCurrencies('rsd')">Serbian Dinar</td>
+		 <td><span ng-show='checkRSD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/rwf.png" width="20">&nbsp RWF</td>
+         <td class='select' ng-click="addCurrencies('rwf')">Rwandan Franc</td>
+		 <td><span ng-show='checkRWF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sar.png" width="20">&nbsp SAR</td>
+         <td class='select' ng-click="addCurrencies('sar')">Saudi Riyal</td>
+		 <td><span ng-show='checkSAR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sbd.png" width="20">&nbsp SBD</td>
+         <td class='select' ng-click="addCurrencies('sbd')">Solomon Islands Dollar</td>
+		 <td><span ng-show='checkSBD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/scr.png" width="20">&nbsp SCR</td>
+         <td class='select' ng-click="addCurrencies('scr')">Seychellois Rupee</td>
+		 <td><span ng-show='checkSCR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sdg.png" width="20">&nbsp SDG</td>
+         <td class='select' ng-click="addCurrencies('sdg')">Sudanese Pound</td>
+		 <td><span ng-show='checkSDG' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/shp.png" width="20">&nbsp SHP</td>
+         <td class='select' ng-click="addCurrencies('shp')">Saint Helena Pound</td>
+		 <td><span ng-show='checkSHP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sll.png" width="20">&nbsp SLL</td>
+         <td class='select' ng-click="addCurrencies('sll')">Sierra Leonean Leone</td>
+		 <td><span ng-show='checkSLL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/sos.png" width="20">&nbsp SOS</td>
+         <td class='select' ng-click="addCurrencies('sos')">Somali Shilling</td>
+		 <td><span ng-show='checkSOS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/srd.png" width="20">&nbsp SRD</td>
+         <td class='select' ng-click="addCurrencies('srd')">Surinamese Dollar</td>
+		 <td><span ng-show='checkSRD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/std.png" width="20">&nbsp STD</td>
+         <td class='select' ng-click="addCurrencies('std')">São Tomé and Príncipe Dobra</td>
+		 <td><span ng-show='checkSTD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/svc.png" width="20">&nbsp SVC</td>
+         <td class='select' ng-click="addCurrencies('svc')">Salvadoran Colón</td>
+		 <td><span ng-show='checkSVC' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/syp.png" width="20">&nbsp SYP</td>
+         <td class='select' ng-click="addCurrencies('syp')">Syrian Pound</td>
+		 <td><span ng-show='checkSYP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/szl.png" width="20">&nbsp SZL</td>
+         <td class='select' ng-click="addCurrencies('szl')">Swazi Lilangeni</td>
+		 <td><span ng-show='checkSZL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>    
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/tjs.png" width="20">&nbsp TJS</td>
+         <td class='select' ng-click="addCurrencies('tjs')">Tajikistani Somoni</td>
+		 <td><span ng-show='checkTJS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/tmt.png" width="20">&nbsp TMT</td>
+         <td class='select' ng-click="addCurrencies('tmt')">Turkmenistani Manat</td>
+		 <td><span ng-show='checkTMT' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/tnd.png" width="20">&nbsp TND</td>
+         <td class='select' ng-click="addCurrencies('tnd')">Tunisian Dinar</td>
+		 <td><span ng-show='checkTND' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/top.png" width="20">&nbsp TOP</td>
+         <td class='select' ng-click="addCurrencies('top')">Tongan Paʻanga</td>
+		 <td><span ng-show='checkTOP' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/try.png" width="20">&nbsp TRY</td>
+         <td class='select' ng-click="addCurrencies('try')">Turkish Lira</td>
+		 <td><span ng-show='checkTRY' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ttd.png" width="20">&nbsp TTD</td>
+         <td class='select' ng-click="addCurrencies('ttd')">Trinidad and Tobago Dollar</td>
+		 <td><span ng-show='checkTTD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/tzs.png" width="20">&nbsp TZS</td>
+         <td class='select' ng-click="addCurrencies('tzs')">Tanzanian Shilling</td>
+		 <td><span ng-show='checkTZS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/uah.png" width="20">&nbsp UAH</td>
+         <td class='select' ng-click="addCurrencies('uah')">Ukrainian Hryvnia</td>
+		 <td><span ng-show='checkUAH' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/ugx.png" width="20">&nbsp UGX</td>
+         <td class='select' ng-click="addCurrencies('ugx')">Ugandan Shilling</td>
+		 <td><span ng-show='checkUGX' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/uyu.png" width="20">&nbsp UYU</td>
+         <td class='select' ng-click="addCurrencies('uyu')">Uruguayan Peso</td>
+		 <td><span ng-show='checkUYU' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/uzs.png" width="20">&nbsp UZS</td>
+         <td class='select' ng-click="addCurrencies('uzs')">Uzbekistan Som</td>
+		 <td><span ng-show='checkUZS' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/vef.png" width="20">&nbsp VEF</td>
+         <td class='select' ng-click="addCurrencies('vef')">Venezuelan Bolívar Fuerte</td>
+		 <td><span ng-show='checkVEF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/vnd.png" width="20">&nbsp VND</td>
+         <td class='select' ng-click="addCurrencies('vnd')">Vietnamese Dong</td>
+		 <td><span ng-show='checkVND' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/vuv.png" width="20">&nbsp VUV</td>
+         <td class='select' ng-click="addCurrencies('vuv')">Vanuatu Vatu</td>
+		 <td><span ng-show='checkVUV' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/wst.png" width="20">&nbsp WST</td>
+         <td class='select' ng-click="addCurrencies('wst')">Samoan Tala</td>
+		 <td><span ng-show='checkWST' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xaf.png" width="20">&nbsp XAF</td>
+         <td class='select' ng-click="addCurrencies('xaf')">CFA Franc BEAC</td>
+		 <td><span ng-show='checkXAF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xag.png" width="20">&nbsp XAG</td>
+         <td class='select' ng-click="addCurrencies('xag')">Silver (troy ounce)</td>
+		 <td><span ng-show='checkXAG' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xau.png" width="20">&nbsp XAU</td>
+         <td class='select' ng-click="addCurrencies('xau')">Gold (troy ounce)</td>
+		 <td><span ng-show='checkXAU' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xcd.png" width="20">&nbsp XCD</td>
+         <td class='select' ng-click="addCurrencies('xcd')">East Caribbean Dollar</td>
+		 <td><span ng-show='checkXCD' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xdr.png" width="20">&nbsp XDR</td>
+         <td class='select' ng-click="addCurrencies('xdr')">Special Drawing Rights</td>
+		 <td><span ng-show='checkXDR' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xof.png" width="20">&nbsp XOF</td>
+         <td class='select' ng-click="addCurrencies('xof')">CFA Franc BCEAO</td>
+		 <td><span ng-show='checkXOF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/xpf.png" width="20">&nbsp XPF</td>
+         <td class='select' ng-click="addCurrencies('xpf')">CFP Franc</td>
+		 <td><span ng-show='checkXPF' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/yer.png" width="20">&nbsp YER</td>
+         <td class='select' ng-click="addCurrencies('yer')">Yemeni Rial</td>
+		 <td><span ng-show='checkYER' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/zmk.png" width="20">&nbsp ZMK</td>
+         <td class='select' ng-click="addCurrencies('zmk')">Zambian Kwacha (pre-2013)</td>
+		 <td><span ng-show='checkZMK' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/zmk.png" width="20">&nbsp ZMW</td>
+         <td class='select' ng-click="addCurrencies('zmw')">Zambian Kwacha</td>
+		 <td><span ng-show='checkZMW' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+      <tr>
+         <td class='left'><img ng-src="../currencyConverter/images/flags/zwl.png" width="20">&nbsp ZWL</td>
+         <td class='select' ng-click="addCurrencies('zwl')">Zimbabwean Dollar</td>
+		 <td><span ng-show='checkZWL' class="glyphicon glyphicon-ok"></span></td>
+      </tr>
+    </tbody>
+
+</table>
+
+<center>
+	<a href="#/">
+		<button id="add" style="cursor:pointer" ng-click="addCurrencies()"  type="button" class="btn btn-success">
+			<span ng-click="myFunction1('usd')">Add selected currencies
+			</span>
+		</button>
+	</a>
+</center>
+<p ng-show="listNumCheck" class="fontsize" id="limit1"> 10 currency max selected. Click on the button to view the conversions.</p>
+</div>
+
+
+ 
